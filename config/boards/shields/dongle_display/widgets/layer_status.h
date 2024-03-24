@@ -8,14 +8,11 @@
 
 #include <lvgl.h>
 #include <zephyr/kernel.h>
-#include <dt-bindings/zmk/modifiers.h>
 
-#define SIZE_SYMBOLS 14 // 14 x 14 pixel
-
-struct zmk_widget_modifiers {
+struct zmk_widget_layer_status {
     sys_snode_t node;
     lv_obj_t *obj;
 };
 
-int zmk_widget_modifiers_init(struct zmk_widget_modifiers *widget, lv_obj_t *parent);
-lv_obj_t *zmk_widget_modifiers_obj(struct zmk_widget_modifiers *widget);
+int zmk_widget_layer_status_init(struct zmk_widget_layer_status *widget, lv_obj_t *parent);
+lv_obj_t *zmk_widget_layer_status_obj(struct zmk_widget_layer_status *widget);
