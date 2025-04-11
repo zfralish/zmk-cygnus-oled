@@ -80,16 +80,16 @@
                 &kp Q      &kp W      &kp F      &kp P      &kp B                          &kp J      &kp L      &kp U      &kp Y      &kp SQT
                 HRML(A,        R,         S,         T)     &kp G                          &kp M      HRMR(N,        E,         I,        O)
                 &kp Z      &kp X      &kp C      &kp D      &kp V                          &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
-                                   &lt MEDIA ESC  &lt NAV SPACE  &lt MOUSE TAB       &lt NUM ENTER  &lt SYM BSPC  &lt FUN DEL
+                                   &lt MEDIA ESC  &lt NAV SPACE  &lt MOUSE TAB       &lt SYM ENTER  &lt NUM BSPC  &lt FUN DEL
             >;
         };
 
         nav_layer {
             // Navigation layer with cursor and selection controls
             bindings = <
-                &none      &none      &none      &none      &none                          &kp PGUP   &kp HOME   &kp UP     &kp END    &none
-                &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT  &none                          &kp PGDN   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
-                &none      &none      &none      &none      &none                          &none      &kp INS    &kp PGDN   &kp PGUP   &none
+                &none      &none      &none      &none      &none                          &none   &none   &none      &none    &none
+                &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT  &none                           &none   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
+                &none      &none      &none      &none      &none                          &none      &kp HOME    &kp PGDN   &kp PGUP   &END
                                       &trans     &kp SPACE  &kp TAB                        &kp ENTER  &kp BSPC   &kp DEL
             >;
         };
@@ -107,7 +107,7 @@
         media_layer {
             // Media controls and system functions
             bindings = <
-                &none      &none      &none      &none      &none                          &none      &none      &kp C_VOL_UP &none     &none
+                &none      &none      &none      &none      &none                          &none      &none      &none &none     &none
                 &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT  &none                          &none      &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &none
                 &none      &none      &none      &none      &none                          &none      &none      &none      &none      &none
                                       &trans     &trans     &trans                         &kp C_PP   &kp C_MUTE &none
