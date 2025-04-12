@@ -19,10 +19,6 @@
 #define SYM 5
 #define FUN 6
 
-// Home row mods macro
-#define HRML(k1,k2,k3,k4) &mt LCTRL k1  &mt LALT k2  &mt LGUI k3  &mt LSHFT k4
-#define HRMR(k1,k2,k3,k4) &mt RSHFT k1  &mt RGUI k2  &mt RALT k3  &mt RCTRL k4
-
 / {
     behaviors {
         hm: homerow_mods {
@@ -77,9 +73,9 @@
             //                                   │  MEDIA   │  NAV     │  MOUSE   │   │  NUM     │  SYM     │  FUN     │
             //                                   ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             bindings = <
-                &kp Q      &kp W      &kp F      &kp P      &kp B                          &kp J      &kp L      &kp U      &kp Y      &kp SQT
-                HRML(A,        R,         S,         T)     &kp G                          &kp M      HRMR(N,        E,         I,        O)
-                &kp Z      &kp X      &kp C      &kp D      &kp V                          &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
+                &kp Q            &kp W      &kp F      &kp P      &kp B                          &kp J      &kp L      &kp U      &kp Y      &kp SQT
+                &hm LCTRL A      &hm LALT R &hm LGUI S &hm LSHFT T &kp G                        &kp M      &hm RSHFT N &hm RGUI E &hm RALT I &hm RCTRL O
+                &kp Z            &kp X      &kp C      &kp D      &kp V                          &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
                                    &lt MEDIA ESC  &lt NAV SPACE  &lt MOUSE TAB       &lt SYM ENTER  &lt NUM BSPC  &lt FUN DEL
             >;
         };
@@ -89,7 +85,7 @@
             bindings = <
                 &none      &none      &none      &none      &none                          &none   &none   &none      &none    &none
                 &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT  &none                           &none   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
-                &none      &none      &none      &none      &none                          &none      &kp HOME    &kp PGDN   &kp PGUP   &END
+                &none      &none      &none      &none      &none                          &none      &kp HOME    &kp PGDN   &kp PGUP   &kp END
                                       &trans     &kp SPACE  &kp TAB                        &kp ENTER  &kp BSPC   &kp DEL
             >;
         };
